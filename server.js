@@ -1,7 +1,6 @@
 // include required libs
 require("dotenv").config();
 var path = require("path");
-var fileType = require("file-type");
 var parser = require("body-parser");
 var express = require("express");
 var exphbs = require("express-handlebars");
@@ -16,7 +15,7 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // link server routing data
-var routes = require("./controllers/burger_controler.js");
+var routes = require("./controllers/burger_controller.js");
 app.use(routes);
 
 // start server
